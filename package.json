@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "QuickStart package for Pluralsights course: Building Applications with Angular, Express and RethinkDB ",
   "scripts": {
-    "start": "tsc && node ./server.js",
+    "start": "concurrently \"tsc -w\" \"node ./server.js\"",
     "tsc": "tsc",
     "tsc:w": "tsc -w"
   },
@@ -24,6 +24,7 @@
     "@angular/platform-browser": "~2.4.0",
     "@angular/platform-browser-dynamic": "~2.4.0",
     "@angular/router": "~3.4.0",
+    "concurrently": "^3.3.0",
     "core-js": "^2.4.1",
     "express": "^4.14.0",
     "rxjs": "5.0.1",
